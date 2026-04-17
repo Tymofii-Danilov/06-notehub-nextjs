@@ -1,9 +1,7 @@
 "use client";
 type ErrorProps = {
-  error: {
-    message: string;
-  };
+  error: Error;
 };
 export default function Error({ error }: ErrorProps) {
-  <p>Could not fetch note details. {error.message}</p>;
+  return <p>Could not fetch note details. {error.message}</p>;
 }

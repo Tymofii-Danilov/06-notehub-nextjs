@@ -48,11 +48,7 @@ export async function createNote({
   return response.data;
 }
 
-interface DeleteNoteProps {
-  id: string;
-}
-
-export async function deleteNote({ id }: DeleteNoteProps): Promise<Note> {
+export async function deleteNote(id: string): Promise<Note> {
   const response = await axios.delete<Note>(`/notes/${id}`);
   return response.data;
 }

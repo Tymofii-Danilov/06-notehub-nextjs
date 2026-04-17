@@ -23,14 +23,11 @@ export default function NoteList({ notes }: NoteListProps) {
 
   const removeNote = (id: string) => {
     setDeletingId(id);
-    deleteMutation.mutate(
-      { id },
-      {
-        onSettled: () => {
-          setDeletingId(null);
-        },
+    deleteMutation.mutate(id, {
+      onSettled: () => {
+        setDeletingId(null);
       },
-    );
+    });
   };
 
   return (
