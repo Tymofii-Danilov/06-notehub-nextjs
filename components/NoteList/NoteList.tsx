@@ -38,11 +38,9 @@ export default function NoteList({ notes }: NoteListProps) {
           <p className={css.content}>{content}</p>
           <div className={css.footer}>
             <span className={css.tag}>{tag}</span>
-            <button className={css.button}>
-              <Link className={css.link} href={`/notes/${id}`}>
-                View details
-              </Link>
-            </button>
+            <Link className={css.link} href={`/notes/${id}`}>
+              View details
+            </Link>
             <button onClick={() => id && removeNote(id)} className={css.button}>
               {deletingId === id ? "Processing..." : "Delete"}
             </button>

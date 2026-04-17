@@ -77,5 +77,14 @@
 
 .link {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
+  background-color: #dc3545;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.link:hover {
+  background-color: #bb2d3b;
 }
